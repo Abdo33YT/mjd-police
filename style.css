@@ -1,0 +1,725 @@
+/* إعادة ضبط عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== الشريط العلوي ===== */
+.top-header {
+  background-color: #0b1130;
+  padding: 15px 40px;
+}
+
+.header-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.badge-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.site-title {
+  text-align: right;
+}
+
+.site-title h1 {
+  font-size: 19px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.site-title span {
+  font-size: 12px;
+  color: #c9a24a;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 22px;
+  border-top: 1px solid #1e2545;
+  padding-top: 12px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #c7cad9;
+  font-size: 14px;
+}
+
+.main-nav a:hover {
+  color: #c9a24a;
+}
+
+.nav-active {
+  background-color: #1a2050;
+  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+/* ===== القسم الرئيسي ===== */
+.hero {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  background-image: linear-gradient(rgba(6, 10, 30, 0.75), rgba(6, 10, 30, 0.92)),
+                     url('images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.hero-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.hero-tag {
+  display: inline-block;
+  border: 1px solid #c9a24a;
+  color: #c9a24a;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 22px;
+}
+
+.hero-content h2 {
+  font-size: 44px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+.hero-content h2 .highlight {
+  color: #c9a24a;
+}
+
+.hero-content p {
+  color: #c7cad9;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 24px 0 32px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #c9a24a;
+  color: #0b1130;
+  font-weight: 700;
+  padding: 14px 30px;
+  border-radius: 6px;
+}
+
+.hero-btn:hover {
+  background-color: #dab55f;
+}
+
+/* ===== أقسام الدليل ===== */
+.sections-area {
+  background-color: #f5f6f9;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.section-title {
+  color: #0b1130;
+  font-size: 28px;
+  margin-bottom: 35px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e4ec;
+  border-radius: 10px;
+  padding: 22px;
+  text-align: right;
+  transition: 0.2s;
+}
+
+.card:hover {
+  border-color: #c9a24a;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+.card-count {
+  display: inline-block;
+  background-color: #f0e6d2;
+  color: #a5822f;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #0b1130;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ===== التذييل ===== */
+.site-footer {
+  background-color: #0b1130;
+  color: #8b90a8;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.site-footer .copyright {
+  margin-top: 8px;
+  color: #c7cad9;
+}
+
+/* ===== الاستجابة للشاشات الصغيرة ===== */
+@media (max-width: 800px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-content h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-nav {
+    gap: 12px;
+  }
+}
+/* ===== ترويسة الصفحات الداخلية ===== */
+.page-header {
+  background-color: #0b1130;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.page-header h1 {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.page-header p {
+  color: #c7cad9;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== محتوى الصفحة الداخلية ===== */
+.page-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.law-group {
+  margin-bottom: 45px;
+}
+
+.law-group h2 {
+  color: #0b1130;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.group-desc {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.article-card {
+  background-color: #f9fafb;
+  border: 1px solid #e2e4ec;
+  border-right: 4px solid #c9a24a;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+}
+
+.article-num {
+  display: inline-block;
+  color: #a5822f;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.article-card h3 {
+  color: #0b1130;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.article-card p {
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.9;
+}
+/* ===== شبكة الأكواد ===== */
+.codes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.code-chip {
+  background-color: #f9fafb;
+  border: 1px solid #e2e4ec;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.code-num {
+  background-color: #0b1130;
+  color: #c9a24a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .codes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== الوضع الداكن للصفحات الداخلية ===== */
+body.dark-page {
+  background-color: #0b1130;
+}
+
+.dark-page .law-group h2 {
+  color: #c9a24a;
+}
+
+.dark-page .group-desc {
+  color: #9aa1c2;
+}
+
+.dark-page .article-card {
+  background-color: #141a3d;
+  border: 1px solid #232a55;
+  border-right: 4px solid #c9a24a;
+}
+
+.dark-page .article-card h3 {
+  color: #ffffff;
+}
+
+.dark-page .article-card p {
+  color: #aeb4d1;
+}
+.codes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #141a3d;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.codes-table th {
+  background-color: #1a2050;
+  color: #c9a24a;
+  font-size: 13px;
+  padding: 10px 14px;
+  text-align: right;
+}
+
+.codes-table td {
+  padding: 10px 14px;
+  border-top: 1px solid #232a55;
+  color: #e5e7eb;
+  font-size: 14px;
+  text-align: right;
+}
+
+.codes-table td.code-name {
+  color: #c9a24a;
+  font-weight: 700;
+}
+
+.code-number-badge {
+  background-color: #c9a24a;
+  color: #0b1130;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+/* القيادة العليا */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.rank-card-lead {
+  background-color: #141a3d;
+  border: 1px solid #232a55;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rank-badge {
+  background-color: #c9a24a;
+  color: #0b1130;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.rank-card-lead h3 {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* السلم العسكري */
+.ranks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.rank-item {
+  background-color: #141a3d;
+  border: 1px solid #232a55;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.rank-level {
+  background-color: #c9a24a;
+  color: #0b1130;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 3px 9px;
+  border-radius: 5px;
+}
+
+/* قواعد الانضباط */
+.discipline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.discipline-item {
+  background-color: #141a3d;
+  border: 1px solid #232a55;
+  border-radius: 8px;
+  padding: 14px 18px;
+  color: #e5e7eb;
+  font-size: 14px;
+  position: relative;
+  padding-right: 34px;
+}
+
+.discipline-item::before {
+  content: "◆";
+  color: #c9a24a;
+  font-size: 12px;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 700px) {
+  .ranks-grid, .leadership-grid { grid-template-columns: 1fr; }
+}
+/* شبكة البنود (عمودين) */
+.penalty-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.penalty-card {
+  background-color: #141a3d;
+  border: 1px solid #232a55;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.penalty-card-header {
+  background-color: #1a2050;
+  padding: 12px 16px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.penalty-card-header.critical {
+  color: #ff6b6b;
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: 0;
+  padding-bottom: 12px;
+}
+
+.penalty-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-top: 1px solid #232a55;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.penalty-num {
+  background-color: #c9a24a;
+  color: #0b1130;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.full-span {
+  grid-column: span 2;
+}
+
+/* شبكة بطاقات معلومات (الوينقات / المعدات) */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.info-card {
+  background-color: #141a3d;
+  border: 1px solid #232a55;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.info-card h3 {
+  color: #c9a24a;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  color: #aeb4d1;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* نقاط موجب/سالب */
+.points-positive { color: #4ade80; font-weight: 700; }
+.points-negative { color: #ff6b6b; font-weight: 700; }
+
+.points-banner {
+  border: 1px solid #c9a24a;
+  color: #c9a24a;
+  background-color: #1a1a2e;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 700px) {
+  .penalty-grid, .info-grid { grid-template-columns: 1fr; }
+  .full-span { grid-column: span 1; }
+}
+.points-positive {
+  color: #4ade80; /* أخضر */
+  font-weight: 700;
+}
+
+.points-negative {
+  color: #ff6b6b; /* أحمر */
+  font-weight: 700;
+}
+.codes-table td.points-positive {
+  color: #4ade80;
+  font-weight: 700;
+}
+
+.codes-table td.points-negative {
+  color: #ff6b6b;
+  font-weight: 700;
+}
+.top-header {
+  background-color: #0b1130;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+/* زر الصفحة التالية */
+.next-nav {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 10px;
+}
+
+.next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #c9a24a;
+  color: #0b1130;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.next-btn:hover {
+  background-color: #dab55f;
+}
+
+/* بطاقة التهنئة (آخر صفحة) */
+.congrats-box {
+  max-width: 600px;
+  margin: 50px auto 10px;
+  text-align: center;
+  background-color: #141a3d;
+  border: 1px solid #c9a24a;
+  border-radius: 10px;
+  padding: 40px 30px;
+}
+
+.congrats-box h2 {
+  color: #c9a24a;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.congrats-box p {
+  color: #c7cad9;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+#progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  z-index: 200;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #c9a24a;
+}
+.calculator-box {
+  background-color: #141a3d;
+  border: 1px solid #232a55;
+  border-radius: 10px;
+  padding: 25px;
+  max-width: 450px;
+}
+
+.calc-field {
+  margin-bottom: 15px;
+}
+
+.calc-field label {
+  display: block;
+  color: #c7cad9;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.calc-field select,
+.calc-field input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #232a55;
+  background-color: #0b1130;
+  color: #ffffff;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.calc-result {
+  margin-top: 18px;
+  color: #c9a24a;
+  font-size: 15px;
+  line-height: 1.8;
+}
