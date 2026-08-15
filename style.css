@@ -723,3 +723,6 @@ body.dark-page {
   font-size: 15px;
   line-height: 1.8;
 }
+.header-inner {
+  display: flex;
+}
