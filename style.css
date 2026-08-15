@@ -726,3 +726,9 @@ body.dark-page {
 .header-inner {
   display: flex;
 }
+.header-inner {
+  display: flex;
+  justify-content: right;
+  margin: 5px;
+  gap: 5px;
+}
